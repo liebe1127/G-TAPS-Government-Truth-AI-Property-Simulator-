@@ -1,0 +1,54 @@
+# Dependencies / env
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+.python-version
+
+# Package managers
+.pnpm-store/
+.npm/
+.yarn/
+.uv/
+
+# Env & secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# IDE / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs & local data
+*.log
+logs/
+tmp/
+temp/
+data/raw/
+data/cache/
+
+# Next.js / frontend
+.next/
+out/
+.turbo/
+coverage/
+
+# Cursor local (keep shared config tracked)
+.cursor/*.log
