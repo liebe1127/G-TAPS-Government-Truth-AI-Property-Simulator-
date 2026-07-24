@@ -1,3 +1,5 @@
+![고신뢰 부동산 의사결정 AI 시뮬레이터 - 가이드라인 인포그래픽](./가이드라인인포그래픽.png)
+
 # G-TAPS — Government Truth AI Property Simulator
 
 부동산 매수/매도 AI 시뮬레이터입니다.
