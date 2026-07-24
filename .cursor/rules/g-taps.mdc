@@ -1,0 +1,14 @@
+---
+description: G-TAPS core product and data integrity rules
+alwaysApply: true
+---
+
+# G-TAPS rules
+
+- Product: government-source-data property buy/sell AI simulator.
+- Primary quality bar: no hallucinated market numbers, tax figures, regulations, or citations.
+- Prefer citing official Korean government / public data sources with dataset name and as-of date.
+- If source data is missing, say so explicitly instead of inventing values.
+- Do not commit secrets, `.env` files with real credentials, or API keys.
+- Keep Cursor Cloud config in `.cursor/environment.json` and install logic in `.cursor/install.sh` idempotent.
+- Prefer small, reviewable PRs over large unrelated refactors.
