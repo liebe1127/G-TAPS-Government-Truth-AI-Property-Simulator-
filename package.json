@@ -1,0 +1,16 @@
+{
+  "name": "g-taps",
+  "private": true,
+  "version": "0.1.0",
+  "description": "G-TAPS — Government Truth AI Property Simulator",
+  "scripts": {
+    "dev": "npm run dev --prefix web",
+    "dev:api": "cd api && uv run uvicorn g_taps_api.main:app --reload --host 0.0.0.0 --port 8000",
+    "build": "npm run build --prefix web",
+    "lint": "npm run lint --prefix web && cd api && uv run ruff check .",
+    "test": "npm run test --prefix web && cd api && uv run pytest"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

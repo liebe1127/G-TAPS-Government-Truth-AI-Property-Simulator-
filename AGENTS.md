@@ -9,13 +9,11 @@
 - 응답에 출처(기관·데이터셋·기준일)를 명시
 - 원천에 없는 내용은 추측하지 않고 "데이터 없음 / 확인 불가"로 처리
 
-## Stack (initial)
+## Stack
 
-- Node.js 22 + pnpm/npm (프론트·앱 서버)
-- Python 3.12 + uv (데이터 파이프라인·분석)
-- 기본 포트: web `3000`, api `8000`
-
-스택이 확정되면 이 섹션과 `.cursor/environment.json`을 함께 갱신한다.
+- `web/` — Vite + React + TypeScript (port `3000`)
+- `api/` — FastAPI + uv (port `8000`)
+- Root `package.json` — convenience scripts
 
 ## Repo conventions
 
@@ -29,23 +27,17 @@
 
 - 설정 파일: `.cursor/environment.json`
 - 이미지: `.cursor/Dockerfile`
-- 의존성 갱신: `bash .cursor/install.sh` (idempotent)
-- 현재 레포는 초기 단계라 lockfile/앱 코드가 없을 수 있다. install 스크립트는 매니페스트가 없으면 스킵한다.
+- 의존성 갱신: `bash .cursor/install.sh` (idempotent; installs `web/` + `api/`)
 
-### After adding app code
-
-1. Node 앱이면 루트에 `package.json` (+ lockfile) 추가
-2. Python 패키지면 `pyproject.toml` 또는 `requirements.txt` 추가
-3. 로컬/클라우드에서 `bash .cursor/install.sh`가 성공하는지 확인
-4. 실행·테스트 명령을 아래 표에 기입
+### Commands
 
 | Task | Command |
 |------|---------|
 | Install deps | `bash .cursor/install.sh` |
-| Dev web | _(앱 추가 후 기입)_ |
-| Dev API | _(앱 추가 후 기입)_ |
-| Lint | _(앱 추가 후 기입)_ |
-| Test | _(앱 추가 후 기입)_ |
+| Dev web | `npm run dev` |
+| Dev API | `npm run dev:api` |
+| Lint | `npm run lint` |
+| Test | `npm run test` |
 
 ### Secrets (do not commit)
 
