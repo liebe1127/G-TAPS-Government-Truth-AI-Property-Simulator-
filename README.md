@@ -13,10 +13,18 @@
 - `.cursor/install.sh` — 의존성 갱신 스크립트
 - `AGENTS.md` — 에이전트 작업 가이드
 
-로컬에서 의존성만 맞추려면:
+## Quick start
 
 ```bash
 bash .cursor/install.sh
+npm run dev:api   # http://localhost:8000
+npm run dev       # http://localhost:3000
 ```
+
+| Path | Role |
+|------|------|
+| `web/` | Vite + React UI |
+| `api/` | FastAPI backend |
+| `.cursor/` | Cloud Agent environment |
 
 시크릿(API 키 등)은 레포에 넣지 말고 [Cursor Cloud Agents Secrets](https://cursor.com/dashboard/cloud-agents)에 등록하세요.
